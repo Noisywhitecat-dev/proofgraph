@@ -47,8 +47,8 @@
 **예상 기간:** 1~2주
 
 ### 작업
-- [ ] **0.1 결정 사항 확정:** 착수 질문(아래)에 답하고 ADR-0002 "기술 스택과 도구"를 작성
-- [ ] **0.2 저장소:** git 초기화, GitHub 공개 저장소 생성(사용자가 직접), `.gitignore`, `.env.example`, 라이선스, README 초안
+- [x] **0.1 결정 사항 확정:** 착수 질문(아래)에 답하고 ADR-0002 "기술 스택과 도구"를 작성 (P0-C3, P0-C4는 대기 중)
+- [x] **0.2 저장소:** git 초기화, GitHub 공개 저장소 생성(사용자가 직접), `.gitignore`, `.env.example`, 라이선스, README 초안
 - [ ] **0.3 모노레포 뼈대:** `AGENTS.md`의 Repository Map에 따른 빈 디렉터리와 각 영역의 README
 - [ ] **0.4 태스크 러너:** 루트 명령 하나로 통일 (just 또는 make). `AGENTS.md`의 Commands 표 채우기
 - [ ] **0.5 로컬 인프라:** Docker Compose로 PostgreSQL(+pgvector), Redis, MinIO 기동, 헬스체크
