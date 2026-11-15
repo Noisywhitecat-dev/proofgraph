@@ -39,3 +39,6 @@
 | 러너 (runner) | Actions가 명령을 실행하는 임시 클라우드 컴퓨터 | `ubuntu-latest` |
 | 비밀값 스캔 (secret scanning) | 실수로 커밋한 비밀번호나 API 키를 찾아내는 검사 | gitleaks |
 | PR 템플릿 | PR을 열 때 자동으로 채워지는 양식 | `.github/pull_request_template.md` |
+| 브랜치 보호 규칙 | 중요한 브랜치에 거는 잠금장치. "PR로만, 검사를 통과해야만 합칠 수 있다" 같은 조건을 강제한다 | main 보호 |
+| 필수 상태 검사 (required status check) | 머지 버튼이 켜지기 전에 반드시 통과해야 하는 CI 검사 | just check, gitleaks |
+| 강제 푸시 (force push) | 원격 저장소의 이력을 덮어쓰는 push. 남의 작업이나 기록을 지울 수 있어 보호 브랜치에서는 막는다 | main에서 금지 |
