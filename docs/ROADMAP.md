@@ -57,7 +57,7 @@
 - [x] **0.3 모노레포 뼈대:** `AGENTS.md`의 Repository Map에 따른 빈 디렉터리와 각 영역의 README
 - [x] **0.4 태스크 러너:** just 1.59.0 설치, 루트 `justfile` 작성(`just`, `just doctor`). 이후 레시피는 단계마다 추가하고 `AGENTS.md`의 Commands 표를 함께 갱신
 - [x] **0.5 로컬 인프라:** Docker Compose로 PostgreSQL(+pgvector, pg_trgm), Redis 기동, 헬스체크, localhost 전용 포트. MinIO는 이미지 배포 중단으로 1.7로 미룸 (ADR-0003)
-- [ ] **0.6 CI 뼈대:** GitHub Actions로 린트와 빈 테스트가 도는 파이프라인, PR 템플릿
+- [x] **0.6 CI 뼈대:** GitHub Actions(`just check` + gitleaks 비밀값 스캔), PR 템플릿, README 배지. 이후 모든 작업은 브랜치와 PR로
 - [ ] **0.7 Claude Code 작업 환경**
   - [ ] `.claude/settings.json`: 권한 허용 목록 (자주 쓰는 읽기 명령)
   - [ ] hooks: 파일 수정 후 해당 언어 포매터 실행

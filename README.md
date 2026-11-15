@@ -1,5 +1,7 @@
 # ProofGraph
 
+[![CI](https://github.com/Noisywhitecat-dev/proofgraph/actions/workflows/ci.yml/badge.svg)](https://github.com/Noisywhitecat-dev/proofgraph/actions/workflows/ci.yml)
+
 **학습·프로젝트·AI 활용 이력을 증빙으로 연결하고, 채용 시장과 대조해 "다음에 무엇을 해야 하는지"를 판단하는 개인 커리어 인텔리전스 시스템.**
 
 > 🚧 0단계(기반) 진행 중. 진행 상황은 [docs/STATUS.md](docs/STATUS.md)에서 볼 수 있습니다.

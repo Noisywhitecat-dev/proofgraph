@@ -14,16 +14,18 @@
 - 0.3 모노레포 뼈대 (서비스별 README)
 - 0.4 just 1.59.0 설치, 루트 justfile
 - 0.5 로컬 인프라: Postgres 17 + pgvector 0.8.7, Redis 7.4 (`just up`). MinIO는 1.7로 미룸 (ADR-0003)
+- 0.6 CI: `just check`와 gitleaks, PR 템플릿 (PR로 반영)
 - 소유자 프로필은 `private/profile.md` (gitignore). 학력 공개 허용, 부트캠프 저장소 `dev_community`, `Fevalgo`
+- 사용자는 개발 입문자: 새 개념은 쉽게 설명하고 `docs/glossary.md`에 추가
 
 ## 다음 작업
-1. 0.6 CI 뼈대 (GitHub Actions, PR 템플릿). 이후 브랜치와 PR로 작업 전환
-2. 0.7 Claude Code 작업 환경 (hooks, rules, tutor·reviewer 에이전트, /til·/adr·/status skill)
-3. 0.8 [직접] 첫 학습 로그, 0단계 검수 질문 (P0-L1, P0-L2, P0-E2)
+1. 0.7 Claude Code 작업 환경 (hooks, rules, tutor·reviewer 에이전트, /til·/adr·/status skill)
+2. 0.8 [직접] 첫 학습 로그, 0단계 검수 질문 (P0-L1, P0-L2, P0-E2)
+3. (선택) main 브랜치 보호 규칙: PR과 CI 통과를 필수로 (사용자 승인 필요)
 
 ## 막힌 것
 - 없음
 
 ## 메모
 - 커밋 이메일은 이 저장소에만 GitHub noreply로 설정
-- 0.6 CI 전까지는 main에 직접 커밋. 이후로는 브랜치와 PR
+- 0.6부터 main에 직접 커밋하지 않는다. 브랜치 → PR → CI 통과 → 머지
