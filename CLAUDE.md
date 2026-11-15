@@ -66,6 +66,20 @@
 - Claude가 작성한 코드는 병합 전에 이해 확인 질문(L 유형)을 1~2개 한다. 사용자가 설명하지 못하면 설명부터 한다.
 - 반복적인 코드, 설정 파일, 인프라 보일러플레이트는 Claude가 작성해도 된다.
 
+## Claude Code 작업 환경 (`.claude/`, ADR-0004)
+
+| 무엇 | 어디 | 언제 쓰나 |
+|---|---|---|
+| 권한 허용 목록 | `.claude/settings.json` | 읽기 명령만 허용. 커밋·push·삭제는 매번 확인한다. 개인 설정은 `settings.local.json`(gitignore) |
+| 포매터 hook | `.claude/hooks/format.mjs` | 파일 수정 직후 자동 실행. 서비스를 만들 때 해당 언어 항목을 `enabled: true`로 바꾼다. 기록은 `format.log` |
+| 경로별 규칙 | `.claude/rules/*.md` | 서비스를 만들 때 해당 언어 파일을 채운다 |
+| `tutor` 에이전트 | `.claude/agents/tutor.md` | 개념을 깊게 설명하거나 학습 점검(L 유형)이 필요할 때. 퀴즈 정답은 사용자가 답한 뒤 보여 준다 |
+| `reviewer` 에이전트 | `.claude/agents/reviewer.md` | 커밋·PR 전, 사용자가 [직접] 쓴 코드를 검토할 때 |
+| `/til` · `/adr` · `/sync-status` | `.claude/skills/` | 학습 로그, ADR, STATUS·ROADMAP 갱신 |
+
+- 이 설정은 **`proofgraph/` 폴더에서 연 세션에서만** 적용된다. 상위 폴더(`D:\ClaudeVault`)에서 열면 읽히지 않는다.
+- `/status`는 Claude Code 기본 명령이다. skill 이름을 정할 때 기본 명령과 겹치지 않게 한다.
+
 ## 하지 말 것
 
 - 단계를 건너뛰지 않는다. 현재 단계의 완료 기준을 채우기 전에 다음 단계 작업을 시작하지 않는다. 사용자가 원하면 예외로 하고 STATUS에 기록한다.

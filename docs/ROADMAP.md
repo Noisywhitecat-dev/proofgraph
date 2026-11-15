@@ -63,7 +63,7 @@
   - [ ] hooks: 파일 수정 후 해당 언어 포매터 실행
   - [ ] `.claude/rules/`: 언어별 경로 규칙 (서비스가 생길 때 추가)
   - [ ] 서브에이전트: `tutor`(개념 설명과 퀴즈), `reviewer`(코드 리뷰)
-  - [ ] skills: `/til`(학습 로그 작성), `/adr`(ADR 작성), `/status`(STATUS 갱신)
+  - [ ] skills: `/til`(학습 로그 작성), `/adr`(ADR 작성), `/sync-status`(STATUS 갱신. `/status`는 Claude Code 기본 명령과 겹쳐 이름 변경)
 - [ ] **0.8 [직접] 첫 학습 로그:** 0단계에서 배운 것을 직접 작성
 
 ### 공부할 것

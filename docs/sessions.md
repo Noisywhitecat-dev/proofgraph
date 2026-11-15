@@ -5,3 +5,4 @@
 | 시작일 | 채팅 제목 | 범위 | 결과 요약 |
 |---|---|---|---|
 | 2026-11-16 | PG 0단계: 기획·기반 | 주제 선정, 기획 문서, 0.1~0.6 | 기획 문서와 ADR 3개, 공개 저장소, just, 로컬 인프라, CI, main 보호 규칙, PR #1·#2 |
+| 2026-11-16 | PG 0.7: 작업환경 | 0.7 Claude Code 작업 환경 | settings.json 권한, 포매터 hook, rules 틀, tutor·reviewer, /til·/adr·/sync-status, ADR-0004 |

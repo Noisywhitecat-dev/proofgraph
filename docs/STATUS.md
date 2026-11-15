@@ -21,7 +21,7 @@
 - 사용자는 개발 입문자: 새 개념은 쉽게 설명하고 `docs/glossary.md`에 추가
 
 ## 다음 작업
-1. 0.7 Claude Code 작업 환경 (hooks, rules, tutor·reviewer 에이전트, /til·/adr·/status skill)
+1. 0.7 Claude Code 작업 환경 (hooks, rules, tutor·reviewer 에이전트, /til·/adr·/sync-status skill)
 2. 0.8 [직접] 첫 학습 로그, 0단계 검수 질문 (P0-L1, P0-L2, P0-E2)
 
 ## 막힌 것

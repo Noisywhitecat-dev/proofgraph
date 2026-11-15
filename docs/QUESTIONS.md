@@ -26,9 +26,14 @@ Claude가 사용자에게 한 질문과 답을 기록한다. 질문 ID와 유형
 | 2026-11-16 | P0-C6 | 부트캠프 결과물 저장소 | `dev_community`, `Fevalgo` (둘 다 공개, Java) | `private/profile.md`, ROADMAP 1.7 |
 | 2026-11-16 | P0-C7 | 학력 공개 여부 | 공개 허용 | `private/profile.md` |
 | 2026-11-16 | P0-C8 | 졸업 시기 | 졸업함 (상세는 비공개 파일) | `private/profile.md` |
+| 2026-11-16 | P0-D10 | hook 스크립트 언어 (Node.js / PowerShell / Python) | Node.js (이미 설치됨, Windows·Linux 공통) | `.claude/hooks/format.mjs`, ADR-0004 |
+| 2026-11-16 | P0-D11 | 권한 허용 목록 범위 (읽기만 / 읽기+커밋 / 최소) | 읽기 명령만. 커밋·push·삭제는 매번 확인 | `.claude/settings.json`, ADR-0004 |
+| 2026-11-16 | P0-D12 | tutor 에이전트 방식 (설명+퀴즈 / 퀴즈 위주 / 설명만) | 설명 후 퀴즈 2~3개, 정답은 사용자가 답한 뒤 공개 | `.claude/agents/tutor.md` |
 
 ## 계획에 없던 질문
 
 | 날짜 | ID | 상황 | 질문 | 답 | 반영 |
 |---|---|---|---|---|---|
 | 2026-11-16 | P0-C5 | 전역 git 이메일이 noreply가 아니어서 공개 커밋에 노출될 상황 | 이 저장소의 커밋 이메일 | GitHub noreply 사용 | 저장소 로컬 git 설정, ADR-0002 |
+| 2026-11-16 | P0-D13 | `/status`가 Claude Code 기본 명령과 이름이 겹쳐 skill로 쓸 수 없음 | STATUS 갱신 skill 이름 | `/sync-status` | `.claude/skills/sync-status/`, ROADMAP 0.7 |
+| 2026-11-16 | P0-C9 | 상위 폴더(`D:ClaudeVault`)에서 연 세션은 `proofgraph/.claude/`의 hooks·skills를 읽지 않음 | 실제 동작 확인 방법 | Claude가 `proofgraph` 폴더에서 확인용 세션을 연다 | ADR-0004 |
