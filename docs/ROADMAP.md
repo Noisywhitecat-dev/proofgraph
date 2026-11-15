@@ -58,12 +58,12 @@
 - [x] **0.4 태스크 러너:** just 1.59.0 설치, 루트 `justfile` 작성(`just`, `just doctor`). 이후 레시피는 단계마다 추가하고 `AGENTS.md`의 Commands 표를 함께 갱신
 - [x] **0.5 로컬 인프라:** Docker Compose로 PostgreSQL(+pgvector, pg_trgm), Redis 기동, 헬스체크, localhost 전용 포트. MinIO는 이미지 배포 중단으로 1.7로 미룸 (ADR-0003)
 - [x] **0.6 CI 뼈대:** GitHub Actions(`just check` + gitleaks 비밀값 스캔), PR 템플릿, README 배지. 이후 모든 작업은 브랜치와 PR로
-- [ ] **0.7 Claude Code 작업 환경**
-  - [ ] `.claude/settings.json`: 권한 허용 목록 (자주 쓰는 읽기 명령)
-  - [ ] hooks: 파일 수정 후 해당 언어 포매터 실행
-  - [ ] `.claude/rules/`: 언어별 경로 규칙 (서비스가 생길 때 추가)
-  - [ ] 서브에이전트: `tutor`(개념 설명과 퀴즈), `reviewer`(코드 리뷰)
-  - [ ] skills: `/til`(학습 로그 작성), `/adr`(ADR 작성), `/sync-status`(STATUS 갱신. `/status`는 Claude Code 기본 명령과 겹쳐 이름 변경)
+- [x] **0.7 Claude Code 작업 환경**
+  - [x] `.claude/settings.json`: 권한 허용 목록 (자주 쓰는 읽기 명령)
+  - [x] hooks: 파일 수정 후 해당 언어 포매터 실행
+  - [x] `.claude/rules/`: 언어별 경로 규칙 (서비스가 생길 때 추가)
+  - [x] 서브에이전트: `tutor`(개념 설명과 퀴즈), `reviewer`(코드 리뷰)
+  - [x] skills: `/til`(학습 로그 작성), `/adr`(ADR 작성), `/sync-status`(STATUS 갱신. `/status`는 Claude Code 기본 명령과 겹쳐 이름 변경)
 - [ ] **0.8 [직접] 첫 학습 로그:** 0단계에서 배운 것을 직접 작성
 
 ### 공부할 것
