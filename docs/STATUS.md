@@ -12,13 +12,14 @@
 - 0.1 착수 결정: AI 엔지니어 목표, 주 30시간+, 전 언어 숙련도 0, 한국어 커밋, just, 월 3만 원, MCP는 Python
 - 0.2 git 초기화, 공개 GitHub 저장소, README, MIT, .gitignore, .gitattributes
 - 0.3 모노레포 뼈대 (서비스별 README)
-- 0.4 just 1.59.0 설치, 루트 justfile (`just`, `just doctor`)
+- 0.4 just 1.59.0 설치, 루트 justfile
+- 0.5 로컬 인프라: Postgres 17 + pgvector 0.8.7, Redis 7.4 (`just up`). MinIO는 1.7로 미룸 (ADR-0003)
 - 소유자 프로필은 `private/profile.md` (gitignore). 학력 공개 허용, 부트캠프 저장소 `dev_community`, `Fevalgo`
 
 ## 다음 작업
-1. 0.5 Docker Compose (Postgres+pgvector, Redis, MinIO)와 `just up` / `just down`
-2. 0.6 CI 뼈대
-3. 대기 중 질문: P0-C8(졸업 시기)
+1. 0.6 CI 뼈대 (GitHub Actions, PR 템플릿). 이후 브랜치와 PR로 작업 전환
+2. 0.7 Claude Code 작업 환경 (hooks, rules, tutor·reviewer 에이전트, /til·/adr·/status skill)
+3. 0.8 [직접] 첫 학습 로그, 0단계 검수 질문 (P0-L1, P0-L2, P0-E2)
 
 ## 막힌 것
 - 없음

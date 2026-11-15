@@ -56,7 +56,7 @@
 - [x] **0.2 저장소:** git 초기화, GitHub 공개 저장소 생성(사용자가 직접), `.gitignore`, `.env.example`, 라이선스, README 초안
 - [x] **0.3 모노레포 뼈대:** `AGENTS.md`의 Repository Map에 따른 빈 디렉터리와 각 영역의 README
 - [x] **0.4 태스크 러너:** just 1.59.0 설치, 루트 `justfile` 작성(`just`, `just doctor`). 이후 레시피는 단계마다 추가하고 `AGENTS.md`의 Commands 표를 함께 갱신
-- [ ] **0.5 로컬 인프라:** Docker Compose로 PostgreSQL(+pgvector), Redis, MinIO 기동, 헬스체크
+- [x] **0.5 로컬 인프라:** Docker Compose로 PostgreSQL(+pgvector, pg_trgm), Redis 기동, 헬스체크, localhost 전용 포트. MinIO는 이미지 배포 중단으로 1.7로 미룸 (ADR-0003)
 - [ ] **0.6 CI 뼈대:** GitHub Actions로 린트와 빈 테스트가 도는 파이프라인, PR 템플릿
 - [ ] **0.7 Claude Code 작업 환경**
   - [ ] `.claude/settings.json`: 권한 허용 목록 (자주 쓰는 읽기 명령)
@@ -161,6 +161,7 @@
 - `P1-D3` 데이터 공개 범위의 기본값: 새로 수집한 증빙은 기본 비공개인가, 기본 공개인가? (비공개 권장)
 - `P1-E1` 채용 담당자가 공개 프로필 첫 화면에서 30초 안에 봐야 할 것 3가지는?
 - `P1-C1` 수집 대상 GitHub 저장소 목록과 제외할 저장소는?
+- `P1-D6` (1.7 착수 시) 원본 저장소: S3 호환 저장소(SeaweedFS, Garage 등)를 둘 것인가, Postgres나 로컬 파일로 충분한가? (ADR-0003)
 
 **진행 중 (상황이 생기면)**
 - `P1-D4` LLM 추출 비용이 예상보다 크면: 모델을 낮출 것인가, 대상 문서를 줄일 것인가?
@@ -428,3 +429,4 @@
 | 2026-11-16 | 최초 작성 | — |
 | 2026-11-16 | AI 엔지니어 중심으로 비중 조정, 기간 2/3로 단축 | P0-D1, P0-C2 답변 |
 | 2026-11-16 | 기간 단축 취소, 언어 입문 과제 추가, [직접] 작업 강도 조정 | P0-C3 (전 언어 0) |
+| 2026-11-16 | 0.5에서 MinIO 제외, 1.7에서 객체 저장소 결정 (P1-D6 추가) | MinIO 이미지 배포 중단 (ADR-0003) |

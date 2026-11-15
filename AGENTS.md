@@ -32,7 +32,10 @@ Windows에서는 PowerShell, Linux·CI에서는 sh로 실행되므로 레시피�
 |---|---|---|
 | 명령 목록 | `just` | |
 | 개발 도구 확인 | `just doctor` | git, docker, just 버전 |
-| 로컬 인프라 기동 | (0.5에서 추가) | Postgres+pgvector, Redis, MinIO |
+| 로컬 인프라 기동 / 중지 | `just up` / `just down` | Postgres+pgvector, Redis. `infra/compose.yaml` |
+| 인프라 상태 / 로그 | `just ps` / `just logs [서비스]` | |
+| DB 접속 | `just psql` | |
+| 로컬 데이터 전체 삭제 | `just nuke` | 확인 질문 후 볼륨 삭제. 되돌릴 수 없다 |
 | 전체 검사 (커밋 전) | (0.6에서 추가) | 린트, 타입 검사, 테스트 |
 | 서비스 하나만 테스트 | (서비스 생성 시 추가) | 좁은 범위를 먼저 |
 
