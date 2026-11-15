@@ -39,6 +39,8 @@ nuke:
 # 커밋 전 전체 검사 (CI도 이 명령을 그대로 실행한다). 서비스가 생기면 여기에 검사를 추가한다
 check:
     {{compose}} config --quiet
+    node --check .claude/hooks/format.mjs
+    node -e "JSON.parse(require('fs').readFileSync('.claude/settings.json', 'utf8'))"
     @echo "check: OK"
 
 # 개발 도구 설치 상태 확인
