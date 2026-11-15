@@ -12,12 +12,13 @@
 - 0.1 착수 결정: AI 엔지니어 목표, 주 30시간+, 전 언어 숙련도 0, 한국어 커밋, just, 월 3만 원, MCP는 Python
 - 0.2 git 초기화, 공개 GitHub 저장소, README, MIT, .gitignore, .gitattributes
 - 0.3 모노레포 뼈대 (서비스별 README)
-- 소유자 프로필은 `private/profile.md` (gitignore, 비공개)
+- 0.4 just 1.59.0 설치, 루트 justfile (`just`, `just doctor`)
+- 소유자 프로필은 `private/profile.md` (gitignore). 학력 공개 허용, 부트캠프 저장소 `dev_community`, `Fevalgo`
 
 ## 다음 작업
-1. 0.4 just 설치 (사용자 확인 후 `winget install Casey.Just`)와 justfile
-2. 0.5 Docker Compose (Postgres+pgvector, Redis, MinIO)
-3. 대기 중 질문: P0-C6(부트캠프 결과물), P0-C7(학력 공개 여부)
+1. 0.5 Docker Compose (Postgres+pgvector, Redis, MinIO)와 `just up` / `just down`
+2. 0.6 CI 뼈대
+3. 대기 중 질문: P0-C8(졸업 시기)
 
 ## 막힌 것
 - 없음

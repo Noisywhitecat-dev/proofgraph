@@ -55,7 +55,7 @@
 - [x] **0.1 결정 사항 확정:** 착수 질문(아래)에 답하고 ADR-0002 "기술 스택과 도구"를 작성 (P0-C3, P0-C4는 대기 중)
 - [x] **0.2 저장소:** git 초기화, GitHub 공개 저장소 생성(사용자가 직접), `.gitignore`, `.env.example`, 라이선스, README 초안
 - [x] **0.3 모노레포 뼈대:** `AGENTS.md`의 Repository Map에 따른 빈 디렉터리와 각 영역의 README
-- [ ] **0.4 태스크 러너:** 루트 명령 하나로 통일 (just 또는 make). `AGENTS.md`의 Commands 표 채우기
+- [x] **0.4 태스크 러너:** just 1.59.0 설치, 루트 `justfile` 작성(`just`, `just doctor`). 이후 레시피는 단계마다 추가하고 `AGENTS.md`의 Commands 표를 함께 갱신
 - [ ] **0.5 로컬 인프라:** Docker Compose로 PostgreSQL(+pgvector), Redis, MinIO 기동, 헬스체크
 - [ ] **0.6 CI 뼈대:** GitHub Actions로 린트와 빈 테스트가 도는 파이프라인, PR 템플릿
 - [ ] **0.7 Claude Code 작업 환경**
@@ -119,7 +119,7 @@
 - [ ] **1.4 [직접] 도메인 CRUD:** Project, Skill, Evidence API와 검증, 서비스 계층 트랜잭션
 - [ ] **1.5 테스트:** 단위 테스트(JUnit), 통합 테스트(Testcontainers로 실제 Postgres)
 - [ ] **1.6 소유자 인증:** GitHub OAuth 로그인, 소유자만 쓰기 가능
-- [ ] **1.7 수집기 v1 (Python):** GitHub API로 내 저장소의 커밋, PR, README 수집. 중복 없이 여러 번 실행해도 같은 결과(멱등성). 원본은 MinIO에 저장
+- [ ] **1.7 수집기 v1 (Python):** GitHub API로 내 저장소의 커밋, PR, README 수집. 첫 대상은 `proofgraph`와 부트캠프 결과물 `dev_community`, `Fevalgo` (P0-C6). 중복 없이 여러 번 실행해도 같은 결과(멱등성). 원본은 MinIO에 저장
 - [ ] **1.8 노트 수집:** ClaudeVault 마크다운 노트 수집 (git 변경분만)
 - [ ] **1.9 기술 추출:** Claude API 구조화 출력으로 문서에서 기술과 수준, 근거 문장 추출. 기술명 정규화
 - [ ] **1.10 [직접] 검토 대기열:** 추출 결과를 소유자가 승인·수정·거절해야 그래프에 반영
