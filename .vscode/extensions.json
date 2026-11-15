@@ -1,0 +1,13 @@
+{
+  // 이 저장소를 VS Code로 열면 아래 확장 설치를 추천한다.
+  // 0단계에 필요한 것만 둔다. 언어 확장은 그 언어를 배우는 단계에서 추가한다.
+  //   1단계: vscjava.vscode-java-pack, vmware.vscode-boot-dev-pack, ms-python.python,
+  //          charliermarsh.ruff, dbaeumer.vscode-eslint, esbenp.prettier-vscode
+  //   4단계: golang.go   /   6단계: rust-lang.rust-analyzer
+  "recommendations": [
+    "anthropic.claude-code",
+    "ms-azuretools.vscode-docker",
+    "redhat.vscode-yaml",
+    "nefrob.vscode-just-syntax"
+  ]
+}
