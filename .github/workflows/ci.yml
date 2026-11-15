@@ -1,0 +1,45 @@
+# CI: main에 push하거나 PR을 열면 자동으로 검사를 돌린다.
+# 원칙: 실제 검사 내용은 justfile에 두고, CI는 `just check`만 부른다 (로컬과 CI가 같은 명령을 쓴다).
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# 같은 브랜치에 새 커밋이 오면 이전 실행을 취소해 시간을 아낀다
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: 저장소 검사 (just check)
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 받기
+        uses: actions/checkout@v4
+
+      - name: just 설치
+        uses: extractions/setup-just@v2
+
+      - name: 검사 실행
+        run: just check
+
+  secrets:
+    name: 비밀값 스캔 (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 받기 (전체 이력)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: gitleaks 실행
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
