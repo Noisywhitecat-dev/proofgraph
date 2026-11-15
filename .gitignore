@@ -42,3 +42,6 @@ target/
 # 로컬 데이터
 infra/data/
 *.log
+
+# 개인 정보 (공개 저장소에 올리지 않음)
+private/

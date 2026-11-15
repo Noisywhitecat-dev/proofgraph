@@ -9,16 +9,19 @@
 
 ## 완료
 - 기획 문서 일체, ADR-0001 주제 선정, ADR-0002 기술 스택과 도구
-- 0.1 착수 결정: AI 엔지니어 목표, 주 30시간+, 한국어 커밋, just, 월 3만 원, MCP는 Python
-- 0.2 git 초기화, 공개 GitHub 저장소 생성과 push, README, MIT, .gitignore, .gitattributes
+- 0.1 착수 결정: AI 엔지니어 목표, 주 30시간+, 전 언어 숙련도 0, 한국어 커밋, just, 월 3만 원, MCP는 Python
+- 0.2 git 초기화, 공개 GitHub 저장소, README, MIT, .gitignore, .gitattributes
+- 0.3 모노레포 뼈대 (서비스별 README)
+- 소유자 프로필은 `private/profile.md` (gitignore, 비공개)
 
 ## 다음 작업
-1. P0-C3(언어별 숙련도), P0-C4(경력·프로젝트 목록) 답 받기
-2. 0.3 모노레포 뼈대 → 0.4 just 설치(사용자 확인 후)와 justfile → 0.5 Docker Compose
+1. 0.4 just 설치 (사용자 확인 후 `winget install Casey.Just`)와 justfile
+2. 0.5 Docker Compose (Postgres+pgvector, Redis, MinIO)
+3. 대기 중 질문: P0-C6(부트캠프 결과물), P0-C7(학력 공개 여부)
 
 ## 막힌 것
 - 없음
 
 ## 메모
-- 이 저장소의 커밋 이메일은 GitHub noreply로 로컬 설정되어 있다 (전역 설정은 그대로)
-- 0단계는 CI 전이라 main에 직접 커밋했다. 0.6 CI 이후로는 브랜치와 PR로 작업한다
+- 커밋 이메일은 이 저장소에만 GitHub noreply로 설정
+- 0.6 CI 전까지는 main에 직접 커밋. 이후로는 브랜치와 PR
